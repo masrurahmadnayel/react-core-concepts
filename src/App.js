@@ -2,6 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  var person = {
+    name:'Dr. Mahfuz',
+    job: 'singer'
+  }
+  var textColor = {
+    color: 'red',
+    backgroundColor: 'yellow'
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -9,17 +17,31 @@ function App() {
         <p>
           Edit has done <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h3>my first calculation = {2+5*(5-2)*3}</h3>
+        <h4 style={{backgroundColor: 'cyan', color: 'darkgray'}}>name: {person.name}</h4>
+        <h5 style={textColor}>job: {person.job}</h5>
+        <Person></Person>
+        <Person></Person>
+        <Person></Person>
+        <p>My first react project</p>
       </header>
     </div>
   );
+}
+
+//first function in react
+function Person(){
+  const personStyle = {
+    border: '2px solid red',
+    margin: '10px',
+    padding: '10px'
+  }
+  return (
+  <div style={personStyle}>
+    <h1>Name: Sakib</h1>
+    <h4>age: 43</h4>
+  </div>
+  )
 }
 
 export default App;
